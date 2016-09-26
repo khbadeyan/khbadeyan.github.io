@@ -393,9 +393,17 @@ footer ul li a.active {
   text-decoration: none;
 }
 .bg-primary {
-  background: #0000b3;
-  background: -webkit-linear-gradient(#0000b3, #0099ff);
-  background: linear-gradient(#0000b3, #0099ff);
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  overflow-y: hidden;
+  background: url("../img/bg-pattern.png"), #0099ff;
+  /* fallback for old browsers */
+  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #0099ff, #000000);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: url("../img/bg-pattern.png"), linear-gradient(to left, #0099ff, #000000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
 }
 .text-primary {
   color: #fdcc52;
